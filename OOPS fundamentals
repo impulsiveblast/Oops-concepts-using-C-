@@ -1,0 +1,38 @@
+#include <iostream>
+
+using namespace std;
+
+class Hero{
+    
+    //properties 
+    public:  //public acess modifiers
+    int health;
+    char level; //public properties hence can be acesses anywhere in the file
+};
+
+class Hero{
+    
+    //properties 
+    public:
+    int health;
+    private:
+    char level; //public properties hence can be acesses anywhere in the file
+};
+
+class Actor{
+    int age;
+    char level; //these properties are unnamed so by default these are private properties 
+    //can be acessed only within the class 
+};
+
+int main()
+{
+ 
+ Hero raju;
+ 
+ cout<<raju.health; //we can acess the health of raju as by default it is 0 
+ cout<<raju.level; //we cannot acess level of raju as it is private acess modifier
+ 
+ return 0;
+}
+
