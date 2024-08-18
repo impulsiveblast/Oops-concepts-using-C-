@@ -23,6 +23,10 @@ class Actor{
     int age;
     char level; //these properties are unnamed so by default these are private properties 
     //can be acessed only within the class 
+
+    void print(){
+     cout<<level;
+    }
 };
 
 int main()
