@@ -1,0 +1,70 @@
+#include <iostream>
+using namespace std;
+
+// class Hero2{
+    
+//     //properties 
+//     public:  //public acess modifiers
+//     int health;
+//     char level; //public properties hence can be acesses anywhere in the file
+// };
+
+class Hero{
+    
+    //properties 
+    public:
+    int health;
+    char getlevel()    //we can get the value of health using gethealth
+    {
+        return level;
+    }
+    
+    void setlevel(char r){   ///we can set or change value of health using sethealth
+        this->level=r;
+    }
+    
+        Hero(char l,int h)   //paramatrised constructor
+        { 
+            
+            cout<<"An object "<<this<<" with Level: "<<l<<" and health: "<<h<<" has got declared"<<endl;
+            this->level=l;  //this keyword is used to insert values while calling a paramatrised constructor
+            this->health=h;
+        }
+         
+    private:
+    char level; //public properties hence can be acesses anywhere in the file
+
+     
+    
+};
+
+class Actor{
+    int age;
+    char level; //these properties are unnamed so by default these are private properties 
+    //can be acessed only within the class 
+
+    void print(){
+     cout<<level;
+    }
+};
+
+int main()
+{
+ 
+//  Hero raju; static allocation
+Hero *raju=new Hero('B',100);//dynamic allocation
+// Hero raju('B',100); static allocation
+//  raju->health=100;
+//  raju.level='B';
+//  cout<<raju.health<<endl; //we can acess the health of raju as by default it is 0 
+//  cout<<raju.level<<endl; //we cannot acess level of raju as it is private acess modifier
+//  raju.sethealth(80);
+ cout<<(*raju).health<<endl;
+//  (*raju).setlevel('B');
+ cout<<(*raju).getlevel()<<endl;
+ 
+//  raju->setlevel('C');
+ cout<<raju->health<<endl;
+ cout<<raju->getlevel()<<endl;
+ return 0;
+}
