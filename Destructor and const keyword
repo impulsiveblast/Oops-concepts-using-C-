@@ -1,0 +1,85 @@
+#include <iostream>
+using namespace std;
+
+// class Hero2{
+    
+//     //properties 
+//     public:  //public acess modifiers
+//     int health;
+//     char level; //public properties hence can be acesses anywhere in the file
+// };
+
+class Hero{
+    
+    //properties 
+    public:
+    int health;
+    char getlevel()    //we can get the value of health using gethealth
+    {
+        return level;
+    }
+    
+    void setlevel(char r){   ///we can set or change value of health using sethealth
+        this->level=r;
+    }
+    
+    void sethealth(int t){   ///we can set or change value of health using sethealth
+        this->health=t;
+    }
+    
+      
+      Hero(){
+          cout<<"Constructor has been called"<<endl;
+      }
+    
+        Hero(char l,int h)   //paramatrised constructor
+        { 
+            
+            cout<<"An object "<<this<<" with Level: "<<l<<" and health: "<<h<<" has got declared"<<endl;
+            this->level=l;  //this keyword is used to insert values while calling a paramatrised constructor
+            this->health=h;
+        }
+        
+        void print()
+        {
+            cout<<"Health value: "<<this->health<<endl;
+            cout<<"Level value: "<<this->level<<endl;
+        }
+        
+        Hero(Hero& t)    //copy constructor made by me
+        {                          //passed by reference exact t object is passed
+            cout<<"A copy constructor has been called"<<endl;
+            this->level=t.level;
+            this->health=t.health;
+        }
+        
+        ~Hero()   //automatically gets called for static memory allocation
+        {
+            cout<<"A huge bbc has entered your dm just now"<<endl;
+        }
+        
+    private:
+    char level; //public properties hence can be acesses anywhere in the file
+    
+     
+    
+};
+
+
+int main()
+{
+  Hero mahesh('C',90);
+  mahesh.print();
+  Hero ganesh(mahesh);  //constructor copy ,the values of mahesh has been copied to  ganesh
+  ganesh.print();
+  
+  Hero *raj=new Hero();
+  
+  delete raj; //manual call for destructor
+  
+   const int  a=55;
+  cout<<a<<endl;
+//   a=6; error is returned as a is const int
+  
+ return 0;
+}
