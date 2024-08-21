@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+class Club{
+    
+    private:  //even if we dont declare its private by default
+    int height;
+    int age;
+    string name;  //data members
+    
+    public:
+    string getname()  //function
+    {
+        return this->name;   //we have made our data read only using getter
+    }
+    
+    Club(string name)   //meathod
+    {
+        this->name=name;
+    }
+};
+
+int main()
+{
+   Club *a=new Club("raju");
+   
+   cout<<a->getname();
+   
+   return 0;
+}
