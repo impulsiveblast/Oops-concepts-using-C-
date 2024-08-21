@@ -1,0 +1,39 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+class players{
+    
+    public:
+    int age;
+    int height;
+    int weight;
+    string name;
+    
+    void setheight(int h)
+    {
+        this->height=h;
+    }
+    
+    
+};
+
+class cricket:public players{
+    
+    string bat;
+    
+    
+    
+};
+
+int main(){
+    
+     cricket a1;
+     
+     cout<<a1.age<<endl;
+     cout<<a1.height<<endl;
+     cout<<a1.weight<<endl;
+     
+     a1.setheight(167);
+     
+     cout<<a1.height<<endl;
+}
