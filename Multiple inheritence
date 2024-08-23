@@ -1,0 +1,48 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+class players{
+    
+    public:
+    int age;
+    int height;
+    int weight;
+    string name;
+    
+    void setheight(int h)
+    {
+        this->height=h;
+    }
+    
+};
+
+class cricket{
+    public:
+    int runs;
+    string type;
+    
+    string cheer()
+    {
+        return "badmasi ni mitr";
+    }
+    
+    
+};
+
+
+class choice:public players,public cricket{  //multiple inheritence //multiple class has got inherited by single class
+   public:
+    string bolde(){
+        return "cheeeta hi keh de!";
+    }
+    
+};
+
+int main(){
+    
+    choice c1;
+    
+    cout<<c1.bolde()<<endl;
+    
+    cout<<c1.type<<endl;  //default/garbage value will get returned
+}
