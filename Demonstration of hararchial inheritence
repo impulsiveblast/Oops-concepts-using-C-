@@ -1,0 +1,51 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+class players{
+    
+    public:
+    int age;
+    int height;
+    int weight;
+    string name;
+    
+    void setheight(int h)
+    {
+        this->height=h;
+    }
+    
+};
+
+class cricket:public players{ 
+    public:
+    int runs;
+    string type;
+    
+    void cheer()
+    {
+        cout<<"badmasi ni mitr";
+    }
+    
+    
+};
+
+
+class choice:public players{  //hirarchial inheritence //members of a single class has got  inherited by multiple classes here choice and cricket 
+    public:
+    void bolde(){
+        cout<<"cheeeta hi keh de!";
+    }
+    
+};
+
+int main(){
+    
+    choice c1;
+    c1.setheight(167);
+    cricket c2;
+    c2.age=24;
+    
+    cout<<c2.age<<endl;
+    
+    cout<<c1.height<<endl;  //default/garbage value will get returned
+}
