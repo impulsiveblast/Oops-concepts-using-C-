@@ -1,0 +1,40 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+class a{
+    
+    public:
+    void print()
+    {
+        cout<<"Hello everyone!"<<endl;
+    }
+};
+
+class b{
+    
+    public:
+    void print()
+    {
+        cout<<"Hello everyone!"<<endl;
+    }
+};
+
+class c:public a,public b{     //ambiguity has arrived as we have inherited 2 classes together havig 2 functions with same name
+    
+    // public:
+    // void print()
+    // {
+    //     cout<<"Hello everyone!"<<endl;
+    // }
+};
+
+int main()
+{
+    c c1;
+    
+    c1.b::print();  //scope resolution
+    
+}
+
+
+
