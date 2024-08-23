@@ -1,0 +1,70 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+class players{
+    
+    public:
+    int age;
+    int height;
+    int weight;
+    string name;
+    
+    void setheight(int h)
+    {
+        this->height=h;
+    }
+    
+    
+    
+};
+
+// class cricket:public players{    //inheriting the class in public mode
+    
+//     string bat;
+    
+    
+    
+// };
+
+// class cricket:protected players{   //inheriting players class in protected mode
+    
+//     string bat;
+    
+//     public:
+    
+//     int getage()
+//     {
+//         return this->age;
+//     }
+    
+// };
+
+// class cricket:private players{   //inheriting players class in private mode
+    
+//     string bat;
+    
+//     public:
+    
+//     int getage()
+//     {
+//         return this->age;
+//     }
+    
+// };
+
+
+int main(){
+    
+     cricket a1;
+     
+    //  cout<<a1.age<<endl;    //default values would get printed in case of public members
+    //  cout<<a1.height<<endl;
+    //  cout<<a1.weight<<endl;
+     
+    //  a1.setheight(167);
+     
+    //  cout<<a1.height<<endl;
+    
+    cout<<a1.getage()<<endl;  //default value/garbage value of age would get printed
+    
+}
