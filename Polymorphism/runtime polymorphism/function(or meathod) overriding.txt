@@ -1,0 +1,34 @@
+#include<bits/stdc++.h>
+  using namespace std;
+  
+  class a{
+      
+      public:
+      void speak()
+      {
+          cout<<"Hi we are learning how to use c++";
+      }
+  };
+  
+  class b:public a{  
+      
+      public:
+      void speak()              //using function overloading in run time polymorphism
+      {
+          
+          cout<<"Hi we are learning how to use java";
+      }
+  };
+  
+  
+  int main()
+  {
+      b b1;
+      
+      b1.speak();
+    // a a1;
+    // a1.speak();
+      
+      return 0;
+  }
+  
