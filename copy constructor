@@ -20,7 +20,8 @@ class Number{
     Number(Number &object)  //copy constructor :it has to be of the same name
     {
         a=object.a;
-    }
+    } 
+//a default shallow copy constructor is present 
 };
 
 int main()
