@@ -1,0 +1,39 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+class base{   //abstract class: a class having atleast 1 pure virtual function no object can be made out of this class .if we try to make any object it will simply throw compile time error
+    public:
+    void pet(){  //a normal function
+         cout<<"i have a cat"<<endl;
+    }
+    
+    
+    virtual void book()=0; //this is a pure virtual function
+    
+    
+};
+
+class derived: public base{
+    public:
+     void book()
+     {   //overriding the pure virtual function
+         cout<<"i have got rich dad and poor dad from the fair";
+     }
+};
+
+
+int main()
+{
+     derived d1;
+     
+     d1.pet();
+     
+     d1.book();
+     
+     //progrm sucessfully runs till here
+     
+     base b1;  //compile time error as no object can be made out of abstract class
+     
+}
+
+
