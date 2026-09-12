@@ -1,0 +1,45 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+//overloading 
+
+class Animal{
+
+public :    
+    void Bark(string s1,string s2){
+        cout<<s1+s2<<endl;
+    }
+    
+    void Bark(int a1,int a2)
+    {
+        cout<<a1<<" "<<"Can bark but not "<<a2;
+    }
+};
+
+class Dog: public Animal{
+    
+    public:
+    
+    void Bark(string s1,int t)
+    {
+        cout<<s1<<" "<<"Barks "<<t<<" times"<<endl;
+    }
+};
+
+
+
+
+int main()
+{
+    // public :
+    // Animal a1;
+    
+    // a1.Bark("gandmare","gandmare2");
+    
+    // a1.Bark(2,4);
+    
+    Dog d1;
+    
+    d1.Bark("Tommy",20);
+    
+}
